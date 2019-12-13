@@ -61,7 +61,7 @@ def send():
     message = request.args.get('message') #request(flask library)
 
     #2. 텔레그램 API 메시지 전송 요청 보내기 
-    send_message = requests.get(f'{url}/bot{token}/sendMessage?chat_id={chat_id}&text={message}')    #requests(python library)    
+    requests.get(f'{url}/bot{token}/sendMessage?chat_id={chat_id}&text={message}')    #requests(python library)    
 
     return render_template('send.html')
 
